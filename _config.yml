@@ -149,9 +149,9 @@ collections:
       layout: post
     output: true
     permalink: /:collection/:title/
-  projects:
-    output: true
-    permalink: /:collection/:title/
+  # projects:
+  #   output: true
+  #   permalink: /:collection/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -173,6 +173,23 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  # -  _pages/repositories.md
+  -  _includes/repository/
+  - _includes/projects.liquid
+  - _includes/projects_horizontal.liquid
+  - _includes/latest_posts.liquid
+  - _plugins/external-posts.rb
+  # - _layouts/archive-year.liquid
+  - _posts/
+  - _news/
+  - _includes/news.liquid
+  - _pages/teaching.md
+  - _pages/news.md
+  - _pages/dropdown.md
+  - _pages/repositories.md
+  - _pages/profiles.md
+  - _pages/projects.md
+  - _projects/*.md
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -265,8 +282,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Hiroo]
+  first_name: [Irobe]
 
   style: apa
   locale: en
