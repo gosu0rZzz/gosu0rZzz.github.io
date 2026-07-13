@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive, example-driven atlas of the competitive advantages and vulnerabilities of 21 major economies.">
+<title>World Economy Atlas — 21 Countries Through Concrete Stories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Interactive learning atlas · July 2026 edition</div>
+    <h1>Understand countries as economic machines—not lists of statistics.</h1>
+    <p>Twenty-one major economies explained through products, companies, bottlenecks and counterfactuals. Learn what each country does unusually well, why competitors cannot copy it quickly, where it captures value, and what can break the model.</p>
+    <div class="hero-actions"><a class="btn primary" href="#atlas">Explore the countries</a><a class="btn" href="#quiz">Test your memory</a><button class="btn" onclick="window.print()">Print / save as PDF</button></div>
+    <div class="stats"><div class="stat"><b>21</b><span>country profiles</span></div><div class="stat"><b>18</b><span>economic archetypes</span></div><div class="stat"><b>5</b><span>questions for every economy</span></div><div class="stat"><b>1</b><span>connected world system</span></div></div>
+  </div>
+</header>
+<main>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>The five-question lens</h2><p>Use the same causal framework for any country. Statistics are evidence; these questions explain the mechanism.</p></div>
+    <div class="framework">
+      <article><span class="num">01</span><h3>What is sold?</h3><p>Identify tradable goods, services, resources and intellectual property—not merely the largest domestic sectors.</p></article>
+      <article><span class="num">02</span><h3>Why here?</h3><p>Look for geography, skills, supplier clusters, institutions, scale, research or accumulated production knowledge.</p></article>
+      <article><span class="num">03</span><h3>Where is the bottleneck?</h3><p>The highest-value layer may be design, a machine, a material, certification, logistics, finance or the customer relationship.</p></article>
+      <article><span class="num">04</span><h3>Who captures the rent?</h3><p>“Rent” means income above the minimum needed to keep a resource or capability in use. Ownership determines who receives it.</p></article>
+      <article><span class="num">05</span><h3>What breaks first?</h3><p>Every model has a failure mode: debt, demographics, energy, trade concentration, weak institutions or technological substitution.</p></article>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>One AI server, many national advantages</h2><p>A product is a map of the world economy. No single country controls every difficult layer.</p></div>
+    <div class="chain">
+      <div class="chain-card"><small>United States</small><b>Architecture and software</b><p>Processor design, networking, cloud platforms and development tools.</p></div>
+      <div class="chain-card"><small>Netherlands + Japan</small><b>Production equipment and materials</b><p>Lithography, optics, chemicals, wafers and precision tools.</p></div>
+      <div class="chain-card"><small>Taiwan</small><b>Advanced fabrication</b><p>Turns designs into high-yield leading-edge silicon.</p></div>
+      <div class="chain-card"><small>South Korea</small><b>High-bandwidth memory</b><p>Feeds enormous quantities of data into AI processors.</p></div>
+      <div class="chain-card"><small>China + Mexico</small><b>Systems and assembly</b><p>Boards, power systems, enclosures and high-volume integration.</p></div>
+      <div class="chain-card"><small>Australia + Indonesia</small><b>Mineral inputs</b><p>Metals and energy-intensive materials enter the hardware chain.</p></div>
+      <div class="chain-card"><small>Singapore + UK</small><b>Trade, insurance and contracts</b><p>Finance, shipping, risk management and legal coordination.</p></div>
+      <div class="chain-card"><small>Canada + Gulf states</small><b>Energy and infrastructure capital</b><p>Power, fuels and investment support the data-centre build-out.</p></div>
+    </div>
+  </div>
+</section>
+<div class="controls" id="atlas"><div class="container control-row"><input id="search" class="control" placeholder="Search country, product or idea…"><select id="region" class="control"><option value="">All regions</option></select><select id="archetype" class="control"><option value="">All archetypes</option></select><button class="btn" id="clear">Clear</button></div></div>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Country atlas</h2><p id="resultCount"></p></div>
+    <div id="cards" class="cards"></div>
+  </div>
+</section>
+<section id="compare">
+  <div class="container">
+    <div class="section-title"><h2>Compare selected economies</h2><p>Select up to four cards. Scores are teaching heuristics from 0 to 5—not measured rankings.</p></div>
+    <div id="compareBox" class="compare-box"><p class="note">Choose countries using the checkboxes on their cards.</p></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>The archetypes</h2><p>Countries are usually combinations. Resilience increases when several independent engines reinforce one another.</p></div>
+    <div id="archetypesList" class="archetypes"></div>
+  </div>
+</section>
+<section id="quiz">
+  <div class="container">
+    <div class="section-title"><h2>Recall quiz</h2><p>Retrieval practice—trying to recall before seeing the answer—creates stronger memory than rereading.</p></div>
+    <div class="quiz">
+      <div class="quiz-card"><div class="eyebrow">Which country?</div><div id="quizQuestion"></div><div id="quizAnswer"></div><div class="hero-actions"><button class="btn primary" id="reveal">Reveal answer</button><button class="btn" id="nextQuiz">Next question</button></div></div>
+      <div class="quiz-side"><h3>Memory method</h3><p>For each country, recall three items:</p><ol><li><b>Object:</b> one concrete product or service.</li><li><b>Moat:</b> why copying it takes years.</li><li><b>Failure:</b> the model’s first weak point.</li></ol><p class="note">Example: Netherlands → EUV machine → supplier/optics ecosystem → export controls and trade fragmentation.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>A four-week learning path</h2><p>About 25 minutes per day. The goal is to form causal models, not memorize rankings.</p></div>
+    <div class="path">
+      <div class="week"><div class="eyebrow">Week 1</div><h3>Learn the grammar</h3><p>Read CORE Econ selections and watch MRU trade videos.</p><ul><li>Productivity</li><li>Comparative advantage</li><li>Scale and clusters</li><li>Institutions and rents</li></ul></div>
+      <div class="week"><div class="eyebrow">Week 2</div><h3>Read trade maps</h3><p>Choose five countries in OEC and the Harvard Atlas.</p><ul><li>Top exports</li><li>Top partners</li><li>Diversification</li><li>Adjacent capabilities</li></ul></div>
+      <div class="week"><div class="eyebrow">Week 3</div><h3>Diagnose constraints</h3><p>Read one OECD or IMF executive summary per day.</p><ul><li>Demography</li><li>Debt and inflation</li><li>Housing and labour</li><li>Energy and trade exposure</li></ul></div>
+      <div class="week"><div class="eyebrow">Week 4</div><h3>Follow one product</h3><p>Trace an AI server, car, drug or tonne of steel across countries.</p><ul><li>Who designs?</li><li>Who manufactures?</li><li>Who finances?</li><li>Who owns the customer?</li></ul></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Best existing resources</h2><p>Use these in order: concepts → visual trade structure → official verification → deep country diagnosis.</p></div>
+    <div id="resources" class="resource-grid"></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Books that make the system concrete</h2><p>Each follows a mechanism—Asian industrialization, chips, materials, containers, commodities or clusters—rather than reciting country facts.</p></div>
+    <div id="books" class="resource-grid"></div>
+  </div>
+</section>
+</main>
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-panel"><div class="modal-top"><b id="modalLabel">Country profile</b><button class="close" id="closeModal" aria-label="Close">×</button></div><div id="profile" class="profile"></div></div></div>
+<footer><div class="container"><b>World Economy Atlas</b><p>Structural explanations are more durable than rankings. Numerical anchors are illustrative and should be rechecked before investment, policy or academic use. Sources are linked inside each profile. Last updated 13 July 2026.</p></div></footer>
+
+<script>window.COUNTRIES=[];</script>
+<script src="data/countries-1.js"></script>
+<script src="data/countries-2.js"></script>
+<script src="data/countries-3.js"></script>
+<script src="data/countries-4.js"></script>
+<script src="data/countries-5.js"></script>
+<script src="data/countries-6.js"></script>
+<script src="data/countries-7.js"></script>
+<script src="data/support.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
